@@ -80,7 +80,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Ansible/ELK.png)
+![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Screenshot%202020-12-13%20153407.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Screenshot%202020-12-13%20153407.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
