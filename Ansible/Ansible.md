@@ -2,12 +2,12 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Diagram/network_diagram.jpg](Images/diagram_filename.png)
+![lugrad90/Cybersecurity-Bootcamp/blob/main/Diagram/network_diagram.jpg](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Diagram/network_diagram.jpg)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - _/etc/ansible/my-elkservers.yml._
 
 This document contains the following details:
 - Description of the Topologu
@@ -23,12 +23,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
-- A load balancer can add additional layers of security to your website without any changes to your application. The Web Application Firewall (WAF) in the load balancer protects your website from hackers  
-Protects against unauthorized access, can detect and drop distributed denial-of-service (DDoS) traffic before it gets to your website and
-a load balancer simplifies compliance with PCI rules.
-- What is the advantage of a jump box?
-The advantage of a JumpBox is the orgination point for launching Administrative Tasks. This ultimately sets the JumpBox as a SAW (Secure Admin Workstation).
-All Administrators when conducting any Administrative Task will be required to connect to the JumpBox (SAW) before perfoming any task/assignment.
+- A load balancer can add additional layers of security to your website without any changes to your application. The Web Application Firewall (WAF) in the load balancer protects your website from hackers.  
+- Protects against unauthorized access, can detect and drop distributed denial-of-service (DDoS) traffic before it gets to your website.
+- A load balancer simplifies compliance with PCI rules.
+- What is the advantage of a jump box?:
+- The advantage of a JumpBox is the orgination point for launching Administrative Tasks. This ultimately sets the JumpBox as a SAW (Secure Admin Workstation).
+All Administrators when conducting any Administrative Task will be required to connect to the (SAW) JumpBox before perfoming any task/assignment.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - Filebeat watches for log files/locations and collects log events.
@@ -39,38 +39,44 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| DVWA-VM1 | Server   |            | Linux            |
-| DVWA-VM1 | Server   |            | Linux            |
-| ELKserver| Server   |            | Linux            |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| DVWA-VM1 | Server   | 10.0.0.7   | Linux            |
+| DVWA-VM1 | Server   | 10.0.0.8   | Linux            |
+| JumpBox 2| Gateway  | 10.1.0.4   | Linux            |  
+| ELK-1    | Server   | 10.1.0.5   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _Personal Home Public IP Address_(White listed)
 
 Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+-Jump-Box-Provisioner VM/VNET IP 10.0.0.4
+-JumpBox-2-ELK VM/VNET IP 10.1.0.4
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 104.45.221.5         |
+| DVWA-VM1 | No                  | 10.0.0.7             |
+| DVWA-VM2 | No                  | 10.0.0.8             |
+| JumpBox 2| Yes                 | 23.100.84.107        |
+| ELK-1    | No                  | 10.1.0.5             |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- You can input multiple commands into multiple servers with a single playbox.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install: docker.10
+- Install: python-pip
+- Install: docker
+- Command: sysctl -w vm.max_map_count=262144
+- Launch Docker Container: elk
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
