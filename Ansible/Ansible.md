@@ -95,7 +95,7 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat monitors log files and/or locations that are specified, collects all log events, and forwards them either to Elasticsearch or Logstash for indexing.
 Filebeat collects all the changes that have been made.
 ![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Filebeat.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Filebeat.png) 
-image taken from {parkjoony/project-1
+image taken from {https://www.google.com/search?q=filebeat+dashboard+example
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 Metricbeat collects all metrics and statistics from the data.
 ![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png)
