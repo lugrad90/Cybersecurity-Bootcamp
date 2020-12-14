@@ -98,7 +98,7 @@ Filebeat collects all the changes that have been made.
 image taken from {https://www.google.com/search?q=filebeat+dashboard+example
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 Metricbeat collects all metrics and statistics from the data.
-![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png)
+![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/metric2.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/metric2.png)
 image taken from {https://www.google.com/search?q=metricbeat+dashboard+example
 
 ### Using the Playbook
