@@ -94,12 +94,12 @@ These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat monitors log files and/or locations that are specified, collects all log events, and forwards them either to Elasticsearch or Logstash for indexing.
 Filebeat collects all the changes that have been made.
-![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Filebeat.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Filebeat.png) 
+![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/kibana-system.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/kibana-system.png) 
 image taken from {https://www.google.com/search?q=filebeat+dashboard+example
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 Metricbeat collects all metrics and statistics from the data.
 ![lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png](https://github.com/lugrad90/Cybersecurity-Bootcamp/blob/main/Ansible/Metricbeat.png)
-image taken from {parkjoony/project-1
+image taken from {https://www.google.com/search?q=metricbeat+dashboard+example
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
