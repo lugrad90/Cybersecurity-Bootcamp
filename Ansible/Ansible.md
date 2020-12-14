@@ -53,16 +53,16 @@ Only the JumpBox machine can accept connections from the Internet. Access to thi
 - _Personal Home Public IP Address_(White listed)
 
 Machines within the network can only be accessed by _____.
--Jump-Box-Provisioner VM/VNET IP 10.0.0.4
--JumpBox-2-ELK VM/VNET IP 10.1.0.4
+-Jump-Box-Provisioner VM/VNET IP Private 10.0.0.4 / Public IP 104.45.221.5 
+-JumpBox-2-ELK VM/VNET Private IP 10.1.0.4 / Public IP 23.100.84.107
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 104.45.221.5         |
-| DVWA-VM1 | No                  | 10.0.0.7             |
-| DVWA-VM2 | No                  | 10.0.0.8             |
+| WEB-1A   | No                  | 10.0.0.7             |
+| WEB-2A   | No                  | 10.0.0.8             |
 | JumpBox 2| Yes                 | 23.100.84.107        |
 | ELK-1    | No                  | 10.1.0.5             |
 
